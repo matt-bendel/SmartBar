@@ -13,16 +13,22 @@ class TestDataSeeder extends Seeder
      */
     public function run()
     {
-        $sevenUp   = factory(Ingredient::class)->create(['name' => '7Up']);
-        $gingerAle = factory(Ingredient::class)->create(['name' => 'Ginger Ale']);
-        $cola      = factory(Ingredient::class)->create(['name' => 'Coca Cola']);
-        $fanta     = factory(Ingredient::class)->create(['name' => 'Fanta']);
+        $sevenUp   = factory(Ingredient::class)->create(['name' => '7Up', 'position' => 1]);
+        $gingerAle = factory(Ingredient::class)->create(['name' => 'Ginger Ale', 'position' => 2]);
+        $cola      = factory(Ingredient::class)->create(['name' => 'Coca Cola', 'position' => 3]);
+        $fanta     = factory(Ingredient::class)->create(['name' => 'Fanta', 'position' => 4]);
+        $tripleSec = factory(Ingredient::class)->create(['name' => 'Tiple Sec', 'position' => 5]);
+        $test1     = factory(Ingredient::class)->create(['name' => 'Test 1', 'position' => 6]);
+        $test2     = factory(Ingredient::class)->create(['name' => 'Test 2', 'position' => 7]);
+        $test2     = factory(Ingredient::class)->create(['name' => 'Test 3', 'position' => 8]);
 
-        $bacardi     = factory(Ingredient::class)->create(['name' => 'Bacardi', 'liquor_percentage' => 37]);
-        $belvedere  = factory(Ingredient::class)->create(['name' => 'Belvedere', 'liquor_percentage' => 40]);
-        $trojka      = factory(Ingredient::class)->create(['name' => 'Trojka', 'liquor_percentage' => 37]);
-        $blueCuracao = factory(Ingredient::class)->create(['name' => 'Blue Curacao', 'liquor_percentage' => 20]);
-        $malibu     = factory(Ingredient::class)->create(['name' => 'Malibu', 'liquor_percentage' => 20]);
+
+        $bacardi     = factory(Ingredient::class)->create(['name' => 'Bacardi', 'liquor_percentage' => 37, 'position' => 1]);
+        $belvedere  = factory(Ingredient::class)->create(['name' => 'Belvedere', 'liquor_percentage' => 40, 'position' => 2]);
+        $trojka      = factory(Ingredient::class)->create(['name' => 'Trojka', 'liquor_percentage' => 37, 'position' => 3]);
+        $blueCuracao = factory(Ingredient::class)->create(['name' => 'Blue Curacao', 'liquor_percentage' => 20, 'position' => 4]);
+        $malibu     = factory(Ingredient::class)->create(['name' => 'Malibu', 'liquor_percentage' => 20, 'position' => 5]);
+        $tequila     = factory(Ingredient::class)->create(['name' => 'Tequila', 'liquor_percentage' => 20, 'position' => 6]);
 
         // Baco
         $baco = factory(Drink::class)->create(['name' => 'Baco', 'image' => '/images/drinks/baco.jpg']);
