@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #f13a3a, #8519a9);
+}
+
+header {
+    font-family: 'Work Sans', sans-serif;
+    background-image: linear-gradient(to right, #f13a3a, #8519a9);
+    border-bottom: solid 1px white;
+}
+
+table {
+    width: 100%;
+    color: white;
+    font-size: 25px;
+}
+
+h2 {
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.header-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 49%;
+    display: inline-block;
+}
+
+.btn {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    background: #F5F5F5;
+    border-radius: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-color: darkgrey;
+    width: 150px;
+    color: #222222;
+    opacity: 0.8;
+    vertical-align: middle;
+}
+
+
+.btn a{
+    color: #222222;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.btn a:hover{
+    color: dimgrey;
+}
+
+.page-item{
+    color: black;
+}
+
+.loading{
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.loader {
+    border: 16px solid white; /* Light grey */
+    /*border-top: 16px solid rebeccapurple; !* Blue *!*/
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -150px;
+    width: 150px;
+    height: 150px;
+    animation: spin 1.5s linear infinite;
+    border-top: 16px solid #8519a9;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
