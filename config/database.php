@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Str;
 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$host = $url["host"] ?? null;
+$username = $url["user"] ?? null;
+$password = $url["pass"] ?? null;
+$database = substr($url["path"], 1);
+
 return [
 
     /*
@@ -45,22 +51,17 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'db4free.net'),
+            'host' => $host,
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'smart_bar'),
-            'username' => env('DB_USERNAME', 'matt_bendel'),
-            'password' => env('DB_PASSWORD', 'Rosso54321!!'),
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
-            'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
         ],
 
         'pgsql' => [
