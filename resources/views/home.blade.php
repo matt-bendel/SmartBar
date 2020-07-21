@@ -5,7 +5,7 @@
                 <div style="margin-top: 100px;">
                     <p style="color: white; font-size: 18px; font-family: 'Courier New';">What drink would you like?</p>
                     <p style="font-size: 40px; font-weight: bold; color: white">Whether you want a delicious cocktail or
-                        just a shot, Smart Bar Does it all!</p>
+                        just a shot, SmartBar Does it all!</p>
                     <div style="text-align: center">
                         <div class="btn" style="align-self: center; width: 300px;">
                             <a href="{{url('/order/drinks/1')}}" style="font-size: 30px;">Order Now</a>
