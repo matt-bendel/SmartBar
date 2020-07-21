@@ -34,10 +34,10 @@ class OrderController extends Controller
     {
         $drink = Drink::with('ingredients')->findOrFail((int)$drink_id);
 
-        // Check if ingredients are in stock
-        if ($drink->inStock === false) {
-            return response()->json(['message' => 'Out of stock'], Response::HTTP_BAD_REQUEST);
-        }
+//        // Check if ingredients are in stock
+//        if ($drink->inStock === false) {
+//            return response()->json(['message' => 'Out of stock'], Response::HTTP_BAD_REQUEST);
+//        }
 
         // Create order
         $order = Order::create([
