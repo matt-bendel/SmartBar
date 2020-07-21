@@ -22,7 +22,7 @@ Route::get('/popular-drinks', 'DrinkController@popularIndex')->name('popular.dri
 
 Route::get('/drinks', 'DrinkController@index')->name('drinks.index');
 
-Route::post('/orders/delete_all', 'OrderController@delete_all');
+Route::get('/orders/delete_all', 'OrderController@delete_all');
 Route::post('/orders', 'OrderController@store')->name('orders.store');
 Route::get('/orders/{order}', 'OrderController@show')->name('orders.show');
 Route::get('/orders', 'OrderController@index')->name('orders.index');
