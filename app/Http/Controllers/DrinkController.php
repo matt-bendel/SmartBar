@@ -22,7 +22,7 @@ class DrinkController extends Controller
         $drinks->ingredients()->sync($ingredients);
         $drinks->save();
 
-        return redirect(url('/order/1'));
+        return redirect(url('/order'));
     }
 
     public function index()
@@ -40,7 +40,7 @@ class DrinkController extends Controller
         $drink = Drink::find($id);
         $drink->delete();
 
-        return redirect(url('/order/1'));
+        return redirect(url('/order'));
     }
 
     private function sortPost($request)
