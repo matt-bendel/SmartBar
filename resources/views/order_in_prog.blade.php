@@ -16,6 +16,7 @@
         </div>
     </div>
     <div style="text-align: center; margin-top: 25px;">
+        <p style="color: white; font-size: 20px;">When your drink is complete, hit the button below.</p>
         <div class="btn">
             @foreach($order as $o)
             <a href="{{url('/orders/' . $o->id . '/delete')}}">Complete Order</a>
