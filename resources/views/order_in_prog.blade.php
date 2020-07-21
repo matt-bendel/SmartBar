@@ -17,7 +17,9 @@
     </div>
     <div style="text-align: center; margin-top: 25px;">
         <div class="btn">
-            <a href="{{url('/orders/' . $order->id . '/delete')}}">Complete Order</a>
+            @foreach($order as $o)
+            <a href="{{url('/orders/' . $o->id . '/delete')}}">Complete Order</a>
+            @endforeach
         </div>
     </div>
 </div>
