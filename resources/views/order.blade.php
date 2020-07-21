@@ -30,11 +30,11 @@ $first = true;
                     ?>
                     <p style="margin: 0;"><span style="font-weight: bold;">{{$ingredient->name}}</span>: {{$ingredient->num_servings}}ml</p>
                     <p style="margin: 0; margin-bottom: 5px; margin-left: 5px;">Amount Left: {{$ingredient->amount}}</p>
-                    <?php
-                        $first = true;
-                    ?>
                 @endif
             @endforeach
+            <?php
+            $first = true;
+            ?>
         </div>
         <div class="col-md-4">
             <div class="btn" style="margin-top: 75px;">
