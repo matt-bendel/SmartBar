@@ -8,6 +8,7 @@ use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderStatus;
 use App\Ingredient;
 use App\Order;
+use http\Env\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 
@@ -81,5 +82,15 @@ class OrderController extends Controller
         $order->delete();
 
         return redirect(url('/'));
+    }
+
+    function delete_all()
+    {
+        $orders = Order::all();
+        foreach ($orders as $order) {
+            $order->delete();
+        }
+
+        return \response();
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Drink;
+use App\Order;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -65,7 +66,7 @@ Route::get('/order/delete/{id}', 'DrinkController@delete');
 Route::get('/order/create/{drink_id}', 'OrderController@store');
 
 Route::get('/order/{id}', function ($id) {
-   $order = Order::all();
+   $order = \App\Order::all();
 
    return view('order_in_prog', ['order' => $order]);
 });
