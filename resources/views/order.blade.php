@@ -36,11 +36,20 @@ $first = true;
             $first = true;
             ?>
         </div>
-        <div class="col-md-4">
-            <div class="btn" style="margin-top: 75px;">
-                <a href="{{url('/order/create/' . $drink->id)}}">Order</a>
+        @if($ingredients['in_stock'])
+            <div class="col-md-4">
+                <div class="btn" style="margin-top: 75px;">
+                    <a href="{{url('/order/create/' . $drink->id)}}">Order</a>
+                </div>
             </div>
-        </div>
+        @else
+            <p style="color: white; font-size: 18px;">Out of Stock</p>
+            <div class="col-md-4">
+                <div class="btn" style="margin-top: 75px;">
+                    <a>Order</a>
+                </div>
+            </div>
+        @endif
     </div>
 @endforeach
     <div style="align-self: center; margin-top: 25px;">

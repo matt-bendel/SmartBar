@@ -38,6 +38,7 @@ Route::get('/order/drinks/{page}', function () {
 
     foreach ($drinks as $drink) {
         $drink_ing = DB::table('drink_ingredient')->where('drink_id', $drink->id)->get();
+        $in_stock = Drink::find($drink->id)->in_stock;
         $array = array();
 
         foreach ($drink_ing as $item) {
@@ -46,6 +47,7 @@ Route::get('/order/drinks/{page}', function () {
             array_push($array, $i);
         }
 
+        $ingredients['in_stock'] = $in_stock;
         $ingredients[$drink->name] = $array;
     }
 
