@@ -36,7 +36,7 @@ $first = true;
             $first = true;
             ?>
         </div>
-        @if($ingredients[$drink->name]['stock'])
+        @if($ingredients[$drink->name]->in_stock)
             <div class="col-md-4">
                 <div class="btn" style="margin-top: 75px;">
                     <a href="{{url('/order/create/' . $drink->id)}}">Order</a>
