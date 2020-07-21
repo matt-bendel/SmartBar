@@ -44,7 +44,7 @@ $first = true;
             </div>
         @else
             <div class="col-md-4">
-                <div style="margin-top: 75px;">
+                <div style="margin-top: 50px;">
                 <p style="color: white; font-size: 18px;">Out of Stock</p>
                 <div class="btn">
                     <a>Order</a>
