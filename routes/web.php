@@ -44,7 +44,7 @@ Route::get('/order/drinks/{page}', function () {
             $i = DB::table('ingredients')->find($item->ingredient_id);
             $i->num_servings = $item->amount;
             array_push($array, $i);
-            if ($item->amount < $i->amount) {
+            if ($i->num_servings > $i->amount) {
                 $ingredients['in_stock'] = false;
             }
         }
