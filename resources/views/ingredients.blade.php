@@ -18,7 +18,7 @@
                     <tr>
                         <td>{{$value->name}}</td>
                         <td>{{$value->liquor_percentage}}%</td>
-                        <td>{{$value->amount}}</td>
+                        <td>{{$value->amount}} (shots)</td>
                         <td>Sensor: {{$value->position}}</td>
                         <td>
                             <div class="btn" style="width: 100px;">
@@ -49,7 +49,7 @@
                 @if($value->type === 'mixer')
                     <tr>
                         <td>{{$value->name}}</td>
-                        <td>{{$value->amount}}</td>
+                        <td>{{$value->amount}} (ml)</td>
                         <td>Pump: {{$value->position}}</td>
                         <td>
                             <div class="btn" style="width: 100px;">
