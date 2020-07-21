@@ -39,17 +39,19 @@ Route::get('/order/drinks/{page}', function () {
     foreach ($drinks as $drink) {
         $drink_ing = DB::table('drink_ingredient')->where('drink_id', $drink->id)->get();
         $array = array();
+        $in_stock = true;
 
         foreach ($drink_ing as $item) {
             $i = DB::table('ingredients')->find($item->ingredient_id);
             $i->num_servings = $item->amount;
             if ($i->num_servings > $i->amount) {
-                $i->in_stock = false;
+                $in_stock = false;
             }
             array_push($array, $i);
         }
 
         $ingredients[$drink->name] = $array;
+        $ingredients[$drink->name]['stock'] = $in_stock;
     }
 
     $drinks = DB::table('drinks')->paginate(5);
