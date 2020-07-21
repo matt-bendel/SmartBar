@@ -43,10 +43,12 @@ $first = true;
                 </div>
             </div>
         @else
-            <p style="color: white; font-size: 18px;">Out of Stock</p>
             <div class="col-md-4">
-                <div class="btn" style="margin-top: 75px;">
+                <div style="margin-top: 75px;">
+                <p style="color: white; font-size: 18px;">Out of Stock</p>
+                <div class="btn">
                     <a>Order</a>
+                </div>
                 </div>
             </div>
         @endif
