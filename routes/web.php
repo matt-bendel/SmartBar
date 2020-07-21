@@ -1,7 +1,6 @@
 <?php
 
 use App\Drink;
-use App\Order;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
