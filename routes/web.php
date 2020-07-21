@@ -35,17 +35,18 @@ Route::put('/ingredients/{id}', 'IngredientController@edit');
 Route::get('/order/drinks/{page}', function () {
     $drinks = DB::table('drinks')->get();
     $ingredients = array();
+    $in_stock = array();
 
     foreach ($drinks as $drink) {
         $drink_ing = DB::table('drink_ingredient')->where('drink_id', $drink->id)->get();
         $array = array();
-        $in_stock = true;
+        $in_stock[$drink->name] = true;
 
         foreach ($drink_ing as $item) {
             $i = DB::table('ingredients')->find($item->ingredient_id);
             $i->num_servings = $item->amount;
             if ($i->num_servings > $i->amount) {
-                $i->in_stock = false;
+                $in_stock[$drink->name] = false;
             }
             array_push($array, $i);
         }
@@ -55,7 +56,7 @@ Route::get('/order/drinks/{page}', function () {
 
     $drinks = DB::table('drinks')->paginate(5);
 
-    return view('order', ['drinks' => $drinks, 'ingredients' => $ingredients]);
+    return view('order', ['drinks' => $drinks, 'ingredients' => $ingredients, 'in_stock' => $in_stock]);
 });
 
 Route::get('/drinks/add', function () {
