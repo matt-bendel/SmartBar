@@ -47,7 +47,7 @@ $first = true;
                 <div style="margin-top: 50px;">
                 <p style="color: white; font-size: 18px;">Out of Stock</p>
                 <div class="btn">
-                    <a>Order</a>
+                    <a style="color: grey">Order</a>
                 </div>
                 </div>
             </div>
