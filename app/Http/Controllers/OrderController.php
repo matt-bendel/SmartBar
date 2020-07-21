@@ -87,8 +87,8 @@ class OrderController extends Controller
     function delete_all()
     {
         $orders = Order::all();
-        foreach ($orders as $order) {
-            $order->delete();
+        foreach ($orders as $o) {
+            Order::find($o->id)->delete();
         }
 
         return \response();
