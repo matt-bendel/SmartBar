@@ -37,6 +37,7 @@ $first = true;
             ?>
         </div>
         @if($ingredients['in_stock'])
+            {{$ingredients['in_stock']}}
             <div class="col-md-4">
                 <div class="btn" style="margin-top: 75px;">
                     <a href="{{url('/order/create/' . $drink->id)}}">Order</a>
