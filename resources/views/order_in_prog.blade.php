@@ -22,7 +22,8 @@
             @foreach($order as $o)
                 <?php if ($first) {
                     ?>
-                    <a href="{{url('/orders/' . $o->id . '/delete')}}">Complete Order</a>
+{{--                    <a href="{{url('/orders/' . $o->id . '/delete')}}">Complete Order</a>--}}
+                    <a href="{{url('/')}}">Complete Order</a>
                 <?php
                 }
                 ?>
