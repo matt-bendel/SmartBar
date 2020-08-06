@@ -18,16 +18,8 @@
     <div style="text-align: center; margin-top: 25px;">
         <p style="color: white; font-size: 20px;">When your drink is complete, hit the button below.</p>
         <div class="btn">
-            <?php $first = true; ?>
-            @foreach($order as $o)
-                <?php if ($first) {
-                    ?>
 {{--                    <a href="{{url('/orders/' . $o->id . '/delete')}}">Complete Order</a>--}}
-                    <a href="{{url('/')}}">Complete Order</a>
-                <?php
-                }
-                ?>
-            @endforeach
+            <a href="{{url('/')}}">Complete Order</a>
         </div>
     </div>
 </div>
