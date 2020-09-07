@@ -14,7 +14,7 @@ $first = true;
             <p style="font-size: 20px; margin: 0; font-weight: bold;">Liquors</p>
             @foreach($ingredients[$drink->name] as $ingredient)
                 @if($ingredient->liquor_percentage != 0.00)
-                    <p style="margin: 0"><span style="font-weight: bold;">{{$ingredient->name}}</span>: {{$ingredient->num_servings}} shots</p>
+                    <p style="margin: 0"><span style="font-weight: bold;">{{$ingredient->name}}</span>: {{$ingredient->num_servings}} shot(s)</p>
                     <p style="margin: 0; margin-bottom: 5px; margin-left: 5px;">Amount Left: {{$ingredient->amount}}</p>
                 @endif
             @endforeach
